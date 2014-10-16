@@ -1,0 +1,1 @@
+any number of classes followed by optional comma where the class is matched (?(CLASS),?)*
