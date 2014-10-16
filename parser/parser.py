@@ -1,5 +1,8 @@
 import re
 
+# Parser for Course Bulletin page (https://web.cse.ohio-state.edu/cgi-bin/portal/report_manager/list.pl?r=12)
+#TODO might want to try parsing from CSE Semester Courses page (http://coe-portal.cse.ohio-state.edu/pdf-exports/CSE/) instead
+
 def parse(prereq_data):
     m_obj = re.search(r"Prereq: (.*).", prereq_data);
     prereq_str = m_obj.group(1)
