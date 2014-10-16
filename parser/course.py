@@ -16,16 +16,18 @@ class Course:
 
     def print_prereqs(self):
         sys.stdout.write('[')
+        sys.stdout.write(' ')
         for p in self.prereqs:
             if type(p) is list:
                 sys.stdout.write('[')
+                sys.stdout.write(' ')
                 for x in p:
                     Course.print_prereq(x)
-                    sys.stdout.write(', ')
+                    sys.stdout.write(' ')
                 sys.stdout.write(']')
             else:
                 Course.print_prereq(p)
-            sys.stdout.write(', ')
+            sys.stdout.write(' ')
         print ']'
 
     #def add_prereq(prereq):
