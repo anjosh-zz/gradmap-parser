@@ -58,7 +58,7 @@ def parse(prereq_data):
         cse_dept.add_course(c)
 
         #### only run 10 times
-        if count > 10:
+        if count > 30:
             break
     
     pprint(vars(cse_dept))
