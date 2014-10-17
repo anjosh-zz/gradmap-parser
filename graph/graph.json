@@ -1,4 +1,5 @@
-me": "flare",
+{
+ "name": "flare",
  "children": [
   {
    "name": "analytics",
