@@ -1,85 +1,7 @@
+
+
 {
   "children": [
-    {
-      "name": "Software Engineering Techniques",
-      "level": "U",
-      "number": "3231",
-      "dept": "CSE",
-      "credits": "3",
-      "children": [
-        {
-          "name": null,
-          "level": null,
-          "number": 3901,
-          "dept": "3901",
-          "credits": null,
-          "children": [
-            
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Social, Ethical, and Professional Issues in Computing",
-      "level": "U",
-      "number": "2501",
-      "dept": "CSE",
-      "credits": "1",
-      "children": [
-        [
-          {
-            "name": null,
-            "level": null,
-            "number": 1222,
-            "dept": "1222",
-            "credits": null,
-            "children": [
-              
-            ]
-          },
-          {
-            "name": null,
-            "level": null,
-            "number": 1223,
-            "dept": "1222",
-            "credits": null,
-            "children": [
-              
-            ]
-          },
-          {
-            "name": null,
-            "level": null,
-            "number": 2231,
-            "dept": "1222",
-            "credits": null,
-            "children": [
-              
-            ]
-          }
-        ],
-        {
-          "name": null,
-          "level": null,
-          "number": 2321,
-          "dept": "2321",
-          "credits": null,
-          "children": [
-            
-          ]
-        },
-        {
-          "name": null,
-          "level": null,
-          "number": 2367,
-          "dept": "ENGR",
-          "credits": null,
-          "children": [
-            
-          ]
-        }
-      ]
-    },
     {
       "name": "Survey of Artificial Intelligence I: Basic Techniques",
       "level": "U",
@@ -91,7 +13,17 @@
           "name": null,
           "level": null,
           "number": 2331,
-          "dept": "2331",
+          "dept": "CSE",
+          "credits": null,
+          "children": [
+            
+          ]
+        },
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
           "credits": null,
           "children": [
             
@@ -100,13 +32,22 @@
       ]
     },
     {
-      "name": "Introduction to Computing Technology",
+      "name": "Introduction to Computer Programming in Java",
       "level": "U",
-      "number": "1110",
+      "number": "1223",
       "dept": "CSE",
-      "credits": "2",
+      "credits": "3",
       "children": [
-        
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            
+          ]
+        }
       ]
     },
     {
@@ -120,345 +61,7 @@
           "name": null,
           "level": null,
           "number": 1130,
-          "dept": "Math",
-          "credits": null,
-          "children": [
-            
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Introduction to Modeling and Simulation",
-      "level": "U",
-      "number": "2021",
-      "dept": "CSE",
-      "credits": "3",
-      "children": [
-        {
-          "name": null,
-          "level": null,
-          "number": 1151,
-          "dept": "Math",
-          "credits": null,
-          "children": [
-            
-          ]
-        },
-        {
-          "name": null,
-          "level": null,
-          "number": 1250,
-          "dept": "Phys",
-          "credits": null,
-          "children": [
-            
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Foundations II: Data Structures and Algorithms",
-      "level": "U",
-      "number": "2331",
-      "dept": "CSE",
-      "credits": "3",
-      "children": [
-        {
-          "name": null,
-          "level": null,
-          "number": 2231,
-          "dept": "2231",
-          "credits": null,
-          "children": [
-            
-          ]
-        },
-        {
-          "name": null,
-          "level": null,
-          "number": 2321,
-          "dept": "2321",
-          "credits": null,
-          "children": [
-            
-          ]
-        },
-        [
-          {
-            "name": null,
-            "level": null,
-            "number": 3460,
-            "dept": "Stat",
-            "credits": null,
-            "children": [
-              
-            ]
-          },
-          {
-            "name": null,
-            "level": null,
-            "number": 3470,
-            "dept": "Stat",
-            "credits": null,
-            "children": [
-              
-            ]
-          }
-        ]
-      ]
-    },
-    {
-      "name": "Foundations I: Discrete Structures",
-      "level": "U",
-      "number": "2321",
-      "dept": "CSE",
-      "credits": "3",
-      "children": [
-        [
-          {
-            "name": null,
-            "level": null,
-            "number": 1232,
-            "dept": "1232",
-            "credits": null,
-            "children": [
-              
-            ]
-          },
-          {
-            "name": null,
-            "level": null,
-            "number": 1233,
-            "dept": "1232",
-            "credits": null,
-            "children": [
-              
-            ]
-          },
-          {
-            "name": null,
-            "level": null,
-            "number": 2221,
-            "dept": "1232",
-            "credits": null,
-            "children": [
-              
-            ]
-          }
-        ],
-        {
-          "name": null,
-          "level": null,
-          "number": 1151,
-          "dept": "Math",
-          "credits": null,
-          "children": [
-            
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Advanced C Programming",
-      "level": "U",
-      "number": "2451",
-      "dept": "CSE",
-      "credits": "2",
-      "children": [
-        {
-          "name": null,
-          "level": null,
-          "number": 2221,
-          "dept": "2221",
-          "credits": null,
-          "children": [
-            
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Systems II: Introduction to Operating Systems",
-      "level": "U",
-      "number": "2431",
-      "dept": "CSE",
-      "credits": "3",
-      "children": [
-        {
-          "name": null,
-          "level": null,
-          "number": 2451,
-          "dept": "2451",
-          "credits": null,
-          "children": [
-            
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Software Requirements Analysis",
-      "level": "U",
-      "number": "3232",
-      "dept": "CSE",
-      "credits": "3",
-      "children": [
-        {
-          "name": null,
-          "level": null,
-          "number": 3241,
-          "dept": "3241",
-          "credits": null,
-          "children": [
-            
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Systems I: Introduction to Low-Level Programming and Computer Organization",
-      "level": "U",
-      "number": "2421",
-      "dept": "CSE",
-      "credits": "4",
-      "children": [
-        [
-          {
-            "name": null,
-            "level": null,
-            "number": 1232,
-            "dept": "1232",
-            "credits": null,
-            "children": [
-              
-            ]
-          },
-          {
-            "name": null,
-            "level": null,
-            "number": 1233,
-            "dept": "1232",
-            "credits": null,
-            "children": [
-              
-            ]
-          },
-          {
-            "name": null,
-            "level": null,
-            "number": 2231,
-            "dept": "1232",
-            "credits": null,
-            "children": [
-              
-            ]
-          }
-        ],
-        [
-          {
-            "name": null,
-            "level": null,
-            "number": 2321,
-            "dept": "2321",
-            "credits": null,
-            "children": [
-              
-            ]
-          },
-          {
-            "name": null,
-            "level": null,
-            "number": 2566,
-            "dept": "2321",
-            "credits": null,
-            "children": [
-              
-            ]
-          }
-        ]
-      ]
-    },
-    {
-      "name": "Spreadsheet Programming for Business",
-      "level": "U",
-      "number": "1113",
-      "dept": "CSE",
-      "credits": "1",
-      "children": [
-        {
-          "name": null,
-          "level": null,
-          "number": 1130,
-          "dept": "Math",
-          "credits": null,
-          "children": [
-            
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Introduction to Database Systems",
-      "level": "U",
-      "number": "3241",
-      "dept": "CSE",
-      "credits": "3",
-      "children": [
-        {
-          "name": null,
-          "level": null,
-          "number": 2133,
-          "dept": "2133",
-          "credits": null,
-          "children": [
-            
-          ]
-        },
-        {
-          "name": null,
-          "level": null,
-          "number": 2321,
-          "dept": "2321",
-          "credits": null,
-          "children": [
-            
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Introduction to Computer-Assisted Problem Solving for Construction Systems Management",
-      "level": "U",
-      "number": "1112",
-      "dept": "CSE",
-      "credits": "3",
-      "children": [
-        
-      ]
-    },
-    {
-      "name": "Introduction to Computer-Assisted Problem Solving",
-      "level": "U",
-      "number": "1111",
-      "dept": "CSE",
-      "credits": "3",
-      "children": [
-        
-      ]
-    },
-    {
-      "name": "Data Structures Using Java",
-      "level": "U",
-      "number": "2123",
-      "dept": "CSE",
-      "credits": "3",
-      "children": [
-        {
-          "name": null,
-          "level": null,
-          "number": 1223,
-          "dept": "1223",
+          "dept": "MATH",
           "credits": null,
           "children": [
             
@@ -477,7 +80,7 @@
           "name": null,
           "level": null,
           "number": 2221,
-          "dept": "2221",
+          "dept": "CSE",
           "credits": null,
           "children": [
             
@@ -486,73 +89,99 @@
       ]
     },
     {
-      "name": "Introduction to Computer Programming in Java",
+      "name": "Systems I: Introduction to Low-Level Programming and Computer Organization",
       "level": "U",
-      "number": "1223",
+      "number": "2421",
       "dept": "CSE",
-      "credits": "3",
+      "credits": "4",
       "children": [
-        
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            {
+              "name": null,
+              "level": null,
+              "number": 1232,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            },
+            {
+              "name": null,
+              "level": null,
+              "number": 1233,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            },
+            {
+              "name": null,
+              "level": null,
+              "number": 2231,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            {
+              "name": null,
+              "level": null,
+              "number": 2321,
+              "dept": "MATH",
+              "credits": null,
+              "children": [
+                
+              ]
+            },
+            {
+              "name": null,
+              "level": null,
+              "number": 2566,
+              "dept": "MATH",
+              "credits": null,
+              "children": [
+                
+              ]
+            }
+          ]
+        }
       ]
     },
     {
-      "name": "Computational Thinking in Context: Mobile Applications",
+      "name": "Data Structures Using Java",
       "level": "U",
-      "number": "1212",
-      "dept": "CSE",
-      "credits": "3",
-      "children": [
-        [
-          {
-            "name": null,
-            "level": null,
-            "number": 1181,
-            "dept": "Engr",
-            "credits": null,
-            "children": [
-              
-            ]
-          },
-          {
-            "name": null,
-            "level": null,
-            "number": 1281,
-            "dept": "Engr",
-            "credits": null,
-            "children": [
-              
-            ]
-          }
-        ]
-      ]
-    },
-    {
-      "name": "Computer Game and Animation Techniques",
-      "level": "U",
-      "number": "3541",
+      "number": "2123",
       "dept": "CSE",
       "credits": "3",
       "children": [
         {
           "name": null,
           "level": null,
-          "number": 3901,
-          "dept": "3901",
+          "number": 1223,
+          "dept": "CSE",
           "credits": null,
           "children": [
             
           ]
         }
-      ]
-    },
-    {
-      "name": "Individual Studies in Computer Science and Engineering",
-      "level": "U",
-      "number": "2193",
-      "dept": "CSE",
-      "credits": "1",
-      "children": [
-        
       ]
     },
     {
@@ -566,7 +195,7 @@
           "name": null,
           "level": null,
           "number": 2231,
-          "dept": "2231",
+          "dept": "CSE",
           "credits": null,
           "children": [
             
@@ -576,7 +205,7 @@
           "name": null,
           "level": null,
           "number": 2421,
-          "dept": "2421",
+          "dept": "CSE",
           "credits": null,
           "children": [
             
@@ -586,7 +215,102 @@
           "name": null,
           "level": null,
           "number": 2331,
-          "dept": "2331",
+          "dept": "MATH",
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Introduction to Computing Technology",
+      "level": "U",
+      "number": "1110",
+      "dept": "CSE",
+      "credits": "2",
+      "children": [
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Introduction to Computer-Assisted Problem Solving for Construction Systems Management",
+      "level": "U",
+      "number": "1112",
+      "dept": "CSE",
+      "credits": "3",
+      "children": [
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Business Programming with File Processing",
+      "level": "U",
+      "number": "2133",
+      "dept": "CSE",
+      "credits": "3",
+      "children": [
+        {
+          "name": null,
+          "level": null,
+          "number": 2123,
+          "dept": "CSE",
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Introduction to Computer-Assisted Problem Solving",
+      "level": "U",
+      "number": "1111",
+      "dept": "CSE",
+      "credits": "3",
+      "children": [
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Spreadsheet Programming for Business",
+      "level": "U",
+      "number": "1113",
+      "dept": "CSE",
+      "credits": "1",
+      "children": [
+        {
+          "name": null,
+          "level": null,
+          "number": 1130,
+          "dept": "MATH",
           "credits": null,
           "children": [
             
@@ -605,7 +329,7 @@
           "name": null,
           "level": null,
           "number": 2451,
-          "dept": "2451",
+          "dept": "CSE",
           "credits": null,
           "children": [
             
@@ -615,7 +339,555 @@
           "name": null,
           "level": null,
           "number": 2421,
-          "dept": "2421",
+          "dept": "ECE",
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Individual Studies in Computer Science and Engineering",
+      "level": "U",
+      "number": "2193",
+      "dept": "CSE",
+      "credits": "1",
+      "children": [
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Computational Thinking in Context: Mobile Applications",
+      "level": "U",
+      "number": "1212",
+      "dept": "CSE",
+      "credits": "3",
+      "children": [
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            {
+              "name": null,
+              "level": null,
+              "number": 1181,
+              "dept": "ENGR",
+              "credits": null,
+              "children": [
+                
+              ]
+            },
+            {
+              "name": null,
+              "level": null,
+              "number": 1281,
+              "dept": "ENGR",
+              "credits": null,
+              "children": [
+                
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Principles of Programming Languages",
+      "level": "U",
+      "number": "3341",
+      "dept": "CSE",
+      "credits": "3",
+      "children": [
+        {
+          "name": null,
+          "level": null,
+          "number": 2231,
+          "dept": "CSE",
+          "credits": null,
+          "children": [
+            
+          ]
+        },
+        {
+          "name": null,
+          "level": null,
+          "number": 2331,
+          "dept": "CSE",
+          "credits": null,
+          "children": [
+            
+          ]
+        },
+        {
+          "name": null,
+          "level": null,
+          "number": 2421,
+          "dept": "CSE",
+          "credits": null,
+          "children": [
+            
+          ]
+        },
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            {
+              "name": null,
+              "level": null,
+              "number": 3901,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            },
+            {
+              "name": null,
+              "level": null,
+              "number": 3902,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            },
+            {
+              "name": null,
+              "level": null,
+              "number": 3903,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Computational Thinking in Context: Images, Animation, and Games",
+      "level": "U",
+      "number": "1211",
+      "dept": "CSE",
+      "credits": "3",
+      "children": [
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Software Engineering Techniques",
+      "level": "U",
+      "number": "3231",
+      "dept": "CSE",
+      "credits": "3",
+      "children": [
+        {
+          "name": null,
+          "level": null,
+          "number": 3901,
+          "dept": "CSE",
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Group Studies in Computer Science and Engineering",
+      "level": "U",
+      "number": "2194",
+      "dept": "CSE",
+      "credits": "1",
+      "children": [
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Systems II: Introduction to Operating Systems",
+      "level": "U",
+      "number": "2431",
+      "dept": "CSE",
+      "credits": "3",
+      "children": [
+        {
+          "name": null,
+          "level": null,
+          "number": 2451,
+          "dept": "CSE",
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Foundations II: Data Structures and Algorithms",
+      "level": "U",
+      "number": "2331",
+      "dept": "CSE",
+      "credits": "3",
+      "children": [
+        {
+          "name": null,
+          "level": null,
+          "number": 2231,
+          "dept": "CSE",
+          "credits": null,
+          "children": [
+            
+          ]
+        },
+        {
+          "name": null,
+          "level": null,
+          "number": 2321,
+          "dept": "MATH",
+          "credits": null,
+          "children": [
+            
+          ]
+        },
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            {
+              "name": null,
+              "level": null,
+              "number": 3460,
+              "dept": "STAT",
+              "credits": null,
+              "children": [
+                
+              ]
+            },
+            {
+              "name": null,
+              "level": null,
+              "number": 3470,
+              "dept": "STAT",
+              "credits": null,
+              "children": [
+                
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Software Requirements Analysis",
+      "level": "U",
+      "number": "3232",
+      "dept": "CSE",
+      "credits": "3",
+      "children": [
+        {
+          "name": null,
+          "level": null,
+          "number": 3241,
+          "dept": "CSE",
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Advanced C Programming",
+      "level": "U",
+      "number": "2451",
+      "dept": "CSE",
+      "credits": "2",
+      "children": [
+        {
+          "name": null,
+          "level": null,
+          "number": 2221,
+          "dept": "CSE",
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Introduction to Modeling and Simulation",
+      "level": "U",
+      "number": "2021",
+      "dept": "CSE",
+      "credits": "3",
+      "children": [
+        {
+          "name": null,
+          "level": null,
+          "number": 1151,
+          "dept": "MATH",
+          "credits": null,
+          "children": [
+            
+          ]
+        },
+        {
+          "name": null,
+          "level": null,
+          "number": 1250,
+          "dept": "PHYS",
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Software I: Software Components",
+      "level": "U",
+      "number": "2221",
+      "dept": "CSE",
+      "credits": "4",
+      "children": [
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            {
+              "name": null,
+              "level": null,
+              "number": 1211,
+              "dept": "ENGR",
+              "credits": null,
+              "children": [
+                
+              ]
+            },
+            {
+              "name": null,
+              "level": null,
+              "number": 1281,
+              "dept": "ENGR",
+              "credits": null,
+              "children": [
+                
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Computer Game and Animation Techniques",
+      "level": "U",
+      "number": "3541",
+      "dept": "CSE",
+      "credits": "3",
+      "children": [
+        {
+          "name": null,
+          "level": null,
+          "number": 3901,
+          "dept": "CSE",
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Introduction to Database Systems",
+      "level": "U",
+      "number": "3241",
+      "dept": "CSE",
+      "credits": "3",
+      "children": [
+        {
+          "name": null,
+          "level": null,
+          "number": 2133,
+          "dept": "CSE",
+          "credits": null,
+          "children": [
+            
+          ]
+        },
+        {
+          "name": null,
+          "level": null,
+          "number": 2321,
+          "dept": "MATH",
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Foundations I: Discrete Structures",
+      "level": "U",
+      "number": "2321",
+      "dept": "CSE",
+      "credits": "3",
+      "children": [
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            {
+              "name": null,
+              "level": null,
+              "number": 1232,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            },
+            {
+              "name": null,
+              "level": null,
+              "number": 1233,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            },
+            {
+              "name": null,
+              "level": null,
+              "number": 2221,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            }
+          ]
+        },
+        {
+          "name": null,
+          "level": null,
+          "number": 1151,
+          "dept": "MATH",
+          "credits": null,
+          "children": [
+            
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Social, Ethical, and Professional Issues in Computing",
+      "level": "U",
+      "number": "2501",
+      "dept": "CSE",
+      "credits": "1",
+      "children": [
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            {
+              "name": null,
+              "level": null,
+              "number": 1222,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            },
+            {
+              "name": null,
+              "level": null,
+              "number": 1223,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            },
+            {
+              "name": null,
+              "level": null,
+              "number": 2231,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            }
+          ]
+        },
+        {
+          "name": null,
+          "level": null,
+          "number": 2321,
+          "dept": "MATH",
+          "credits": null,
+          "children": [
+            
+          ]
+        },
+        {
+          "name": "Gen Ed Writing Level 2",
+          "level": null,
+          "number": 2367,
+          "dept": "ENGR",
           "credits": null,
           "children": [
             
@@ -634,114 +906,51 @@
           "name": null,
           "level": null,
           "number": 2231,
-          "dept": "2231",
+          "dept": "CSE",
           "credits": null,
           "children": [
             
           ]
         },
-        [
-          {
-            "name": null,
-            "level": null,
-            "number": 2421,
-            "dept": "2421",
-            "credits": null,
-            "children": [
-              
-            ]
-          },
-          {
-            "name": null,
-            "level": null,
-            "number": 2560,
-            "dept": "2421",
-            "credits": null,
-            "children": [
-              
-            ]
-          }
-        ],
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            {
+              "name": null,
+              "level": null,
+              "number": 2421,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            },
+            {
+              "name": null,
+              "level": null,
+              "number": 2560,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            }
+          ]
+        },
         {
           "name": null,
           "level": null,
           "number": 2000,
-          "dept": "2000",
+          "dept": "CSE",
           "credits": null,
           "children": [
             
           ]
         }
-      ]
-    },
-    {
-      "name": "Group Studies in Computer Science and Engineering",
-      "level": "U",
-      "number": "2194",
-      "dept": "CSE",
-      "credits": "1",
-      "children": [
-        
-      ]
-    },
-    {
-      "name": "Software I: Software Components",
-      "level": "U",
-      "number": "2221",
-      "dept": "CSE",
-      "credits": "4",
-      "children": [
-        [
-          {
-            "name": null,
-            "level": null,
-            "number": 1211,
-            "dept": "1211",
-            "credits": null,
-            "children": [
-              
-            ]
-          },
-          {
-            "name": null,
-            "level": null,
-            "number": 1281,
-            "dept": "1211",
-            "credits": null,
-            "children": [
-              
-            ]
-          }
-        ]
-      ]
-    },
-    {
-      "name": "Business Programming with File Processing",
-      "level": "U",
-      "number": "2133",
-      "dept": "CSE",
-      "credits": "3",
-      "children": [
-        {
-          "name": null,
-          "level": null,
-          "number": 2123,
-          "dept": "2123",
-          "credits": null,
-          "children": [
-            
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Computational Thinking in Context: Images, Animation, and Games",
-      "level": "U",
-      "number": "1211",
-      "dept": "CSE",
-      "credits": "3",
-      "children": [
-        
       ]
     },
     {
@@ -755,7 +964,7 @@
           "name": null,
           "level": null,
           "number": 2231,
-          "dept": "2231",
+          "dept": "CSE",
           "credits": null,
           "children": [
             
@@ -765,34 +974,41 @@
           "name": null,
           "level": null,
           "number": 2321,
-          "dept": "2321",
+          "dept": "MATH",
           "credits": null,
           "children": [
             
           ]
         },
-        [
-          {
-            "name": null,
-            "level": null,
-            "number": 2421,
-            "dept": "CSE",
-            "credits": null,
-            "children": [
-              
-            ]
-          },
-          {
-            "name": null,
-            "level": null,
-            "number": 2560,
-            "dept": "CSE",
-            "credits": null,
-            "children": [
-              
-            ]
-          }
-        ],
+        {
+          "name": "Or Group",
+          "level": null,
+          "number": null,
+          "dept": null,
+          "credits": null,
+          "children": [
+            {
+              "name": null,
+              "level": null,
+              "number": 2421,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            },
+            {
+              "name": null,
+              "level": null,
+              "number": 2560,
+              "dept": "CSE",
+              "credits": null,
+              "children": [
+                
+              ]
+            }
+          ]
+        },
         {
           "name": null,
           "level": null,
@@ -804,78 +1020,8 @@
           ]
         }
       ]
-    },
-    {
-      "name": "Principles of Programming Languages",
-      "level": "U",
-      "number": "3341",
-      "dept": "CSE",
-      "credits": "3",
-      "children": [
-        {
-          "name": null,
-          "level": null,
-          "number": 2231,
-          "dept": "2231",
-          "credits": null,
-          "children": [
-            
-          ]
-        },
-        {
-          "name": null,
-          "level": null,
-          "number": 2331,
-          "dept": "2231",
-          "credits": null,
-          "children": [
-            
-          ]
-        },
-        {
-          "name": null,
-          "level": null,
-          "number": 2421,
-          "dept": "2421",
-          "credits": null,
-          "children": [
-            
-          ]
-        },
-        [
-          {
-            "name": null,
-            "level": null,
-            "number": 3901,
-            "dept": "3901",
-            "credits": null,
-            "children": [
-              
-            ]
-          },
-          {
-            "name": null,
-            "level": null,
-            "number": 3902,
-            "dept": "3901",
-            "credits": null,
-            "children": [
-              
-            ]
-          },
-          {
-            "name": null,
-            "level": null,
-            "number": 3903,
-            "dept": "3901",
-            "credits": null,
-            "children": [
-              
-            ]
-          }
-        ]
-      ]
     }
   ],
   "name": "CSE"
 }
+
