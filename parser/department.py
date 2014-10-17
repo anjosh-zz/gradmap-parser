@@ -1,6 +1,5 @@
 from neomodel import (StructuredNode, StringProperty, IntegerProperty,
         RelationshipTo, RelationshipFrom)
-#from course import Course
 
 class Department(StructuredNode):
     # TODO Might want to add more constraint properties latter

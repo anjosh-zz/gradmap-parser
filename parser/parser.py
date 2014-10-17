@@ -25,7 +25,7 @@ def parse(prereq_data):
         level = m_obj.group(3)
         credits = int(m_obj.group(4))
         dept = 'CSE'
-        c = Course(name=name, number=number, level=level, credits=credits, dept=dept).save()
+        c = Course(name=name, number=number, level=level, credits=credits).save()
 
         prereq_str = m_obj.group(5)
         added_groups = prereq_str.split('and')
@@ -34,23 +34,17 @@ def parse(prereq_data):
             and_group = and_group.strip()
             if 'or' in and_group:
                 or_group = Course(OR_GROUP).save()
-                or_group.add_prereqs(and_group)
+                or_group.add_prereqs(and_group, cse_dept)
                 # TODO might want to test to see if or_group.prereqs equals
                 # 0 or 1 and then delete the or_group obj if that's true
                 c.prereq.connect(or_group)
-                for p in or_group.prereq.all():
-                    if p.dept == 'CSE':
-                        cse_dept.course.connect(p)
-                    else:
-                        c.add_prereqs(and_group)
+            else:
+                c.add_prereqs(and_group, cse_dept)
 
         c.save()
         pprint(vars(c))
 
         cse_dept.course.connect(c)
-        for p in c.prereq.all():
-            if p.dept == 'CSE':
-                cse_dept.course.connect(p)
 
         #### only run 10 times
         if count > 30:

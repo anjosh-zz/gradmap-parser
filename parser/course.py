@@ -3,7 +3,6 @@ import re
 from pprint import pprint
 from neomodel import (StructuredNode, StringProperty, IntegerProperty,
         RelationshipTo, RelationshipFrom)
-#import department
 from department import Department
 
 # Special Course definitions
@@ -15,9 +14,8 @@ class Course(StructuredNode):
     number = IntegerProperty(index=True)
     level = StringProperty()
     credits = IntegerProperty(index=True)
-    dept = StringProperty()
 
-    #dept = RelationshipTo('Deptartment', 'IS_FROM')
+    dept = RelationshipTo('department.Department', 'IS_FROM')
     prereq = RelationshipFrom('Course', 'PREREQ')
 
     @staticmethod
@@ -35,7 +33,7 @@ class Course(StructuredNode):
             sys.stdout.write(' ')
         sys.stdout.write(']')
 
-    def add_prereqs(self, prereqs):
+    def add_prereqs(self, prereqs, cse_dept):
         m = re.search(r"([A-Za-z]{3,4})", prereqs)
         dept = m.group(1).upper() if m else 'CSE'
         if dept != 'NOT':
@@ -50,6 +48,17 @@ class Course(StructuredNode):
                         number = int(m.group(1))
                         print number
                         print dept
-                        c = Course(number=number, dept=dept).save()
+                        # TODO not using dept right now
+                        # might need to add relationship to dept
+                        #dept = Department(name=dept).save()
+                        if dept == 'CSE':
+                            c_list = cse_dept.course.search(number=number)
+                            if len(c_list) == 0:
+                                c = Course(number=number).save()
+                                c.dept.connect(cse_dept)
+                            else:
+                                c = c_list[0]
+                        else:
+                            c = Course(number=number).save()
                         pprint(vars(c))
                         self.prereq.connect(c)
