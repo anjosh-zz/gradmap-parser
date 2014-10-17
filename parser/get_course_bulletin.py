@@ -1,5 +1,6 @@
 import urllib2
 import parser
+import json
 
 def get_course_bulletin():
     url = 'https://web.cse.ohio-state.edu/cgi-bin/'\
@@ -12,4 +13,7 @@ def get_course_bulletin():
 
 if __name__=='__main__':
     f = open('course_bulletin', 'w')
-    f.write(parser.parse(get_course_bulletin()))
+    courses_json = parser.parse(get_course_bulletin())
+    #pretty_json = json.dumps(courses_json, \
+    #    sort_keys=True, indent=4, separators=(',', ': '))
+    f.write(courses_json)
