@@ -12,7 +12,7 @@ def get_course_bulletin():
     return course_bulletin
 
 if __name__=='__main__':
-    f = open('course_bulletin', 'w')
+    f = open('parser/course_bulletin.json', 'w')
     courses_json = parser.parse(get_course_bulletin())
     #pretty_json = json.dumps(courses_json, \
     #    sort_keys=True, indent=4, separators=(',', ': '))
