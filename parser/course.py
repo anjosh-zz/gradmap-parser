@@ -1,8 +1,8 @@
 import sys
 
 class Course:
-    def __init__(self, number, dept = 'CSE',
-            name = None, level = None, credits = None):
+    def __init__(self, name = None, number = None, dept = None,
+            level = None, credits = None):
         self.number = number
         self.dept = dept
         self.name = name
@@ -18,17 +18,19 @@ class Course:
         sys.stdout.write('[')
         sys.stdout.write(' ')
         for p in self.prereqs:
-            if type(p) is list:
-                sys.stdout.write('[')
-                sys.stdout.write(' ')
-                for x in p:
-                    Course.print_prereq(x)
-                    sys.stdout.write(' ')
-                sys.stdout.write(']')
+            if p.prereqs:
+                Course.print_prereqs(p)
+            #if type(p) is list:
+            #    sys.stdout.write('[')
+            #    sys.stdout.write(' ')
+            #    for x in p:
+            #        Course.print_prereq(x)
+            #        sys.stdout.write(' ')
+            #    sys.stdout.write(']')
             else:
                 Course.print_prereq(p)
             sys.stdout.write(' ')
-        print ']'
+        sys.stdout.write(']')
 
     #def add_prereq(prereq):
     #    self.prereqs.append(prereq)

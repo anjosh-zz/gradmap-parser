@@ -8,7 +8,8 @@ import deptartment
 # TODO might want to try parsing from CSE Semester Courses page (http://coe-portal.cse.ohio-state.edu/pdf-exports/CSE/) instead
 
 # Special Class definitions
-SECOND_WRIT = (2367, 'ENGR')
+SECOND_WRIT = ('Gen Ed Writing Level 2', 2367, 'ENGR')
+OR_GROUP = 'Or Group'
 
 def parse(prereq_data):
     #depts = {}
@@ -27,7 +28,7 @@ def parse(prereq_data):
         #    depts.add(dept)
         #cse_dept = dept.Dept('CSE')
 
-        c = course.Course(number, dept, name, level, credits)
+        c = course.Course(name, number, dept, level, credits)
         prereq_str = m_obj.group(5)
 
         added_groups = prereq_str.split('and')
@@ -41,7 +42,10 @@ def parse(prereq_data):
                 if len(or_list) == 1:
                     prereqs.append(or_list[0])
                 else:
-                    prereqs.append(or_list)
+                    or_course = course.Course(OR_GROUP)
+                    or_course.prereqs = or_list
+                    prereqs.append(or_course)
+                    #prereqs.append(or_list)
                 or_list = []
             else:
                 prereqs = add_prereqs(and_group, prereqs)
@@ -51,6 +55,7 @@ def parse(prereq_data):
 
         c.prereqs = prereqs
         c.print_prereqs()
+        print
         pprint(vars(c))
 
         cse_dept.add_course(c)
@@ -80,7 +85,7 @@ def add_prereqs(prereqs, to_list):
                 m = re.search(r"(\d{4})", c)
                 if m:
                     number = int(m.group(1))
-                    c = course.Course(number, dept.upper())
+                    c = course.Course(None, number, dept.upper())
                     to_list.append(c)
                     #to_list.add_prereq(c)
 
