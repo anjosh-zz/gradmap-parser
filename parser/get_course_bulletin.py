@@ -16,4 +16,4 @@ if __name__=='__main__':
     courses_json = parser.parse(get_course_bulletin())
     #pretty_json = json.dumps(courses_json, \
     #    sort_keys=True, indent=4, separators=(',', ': '))
-    f.write(courses_json)
+    #f.write(courses_json)

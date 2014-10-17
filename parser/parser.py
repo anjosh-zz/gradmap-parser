@@ -1,24 +1,20 @@
 import re
 import jsonpickle
 from pprint import pprint
+from department import Department
 from course import Course
-from department import Department 
 
 # Parser for Course Bulletin page:
 # https://web.cse.ohio-state.edu/cgi-bin/portal/report_manager/list.pl?r=12
 # TODO might want to try parsing from CSE Semester Courses page:
 # http://coe-portal.cse.ohio-state.edu/pdf-exports/CSE/ instead
 
-# Special Class definitions
-SECOND_WRIT = ('Gen Ed Writing Level 2', 2367, 'ENGR')
-OR_GROUP = 'Or Group'
+OR_GROUP = {'name':'Or Group'}
 
 # TODO everything is backwards. make prereqs parents
 # instead of children somehow
-# TODO might want to use sets instead of lists
 def parse(prereq_data):
-    #depts = {}
-    cse_dept = Department('CSE')
+    cse_dept = Department(name='CSE').save()
     it = re.finditer(r"(\d{4})\s+([\w\s,:-]+?)\s+([UG]{1,2})\s+(\d).*?" \
                     "Prereq: (.*?)\.", prereq_data, re.MULTILINE|re.DOTALL);
     count = 0
@@ -29,76 +25,43 @@ def parse(prereq_data):
         level = m_obj.group(3)
         credits = int(m_obj.group(4))
         dept = 'CSE'
+        c = Course(name=name, number=number, level=level, credits=credits, dept=dept).save()
 
-        c = Course(name, number, dept, level, credits)
         prereq_str = m_obj.group(5)
-
         added_groups = prereq_str.split('and')
-        prereqs = []
-        or_list = []
 
         for and_group in added_groups:
             and_group = and_group.strip()
             if 'or' in and_group:
-                or_list = add_prereqs(and_group, or_list)
-                if len(or_list) == 1:
-                    prereqs.append(or_list[0])
-                else:
-                    or_course = Course(OR_GROUP)
-                    or_course.prereqs = or_list
-                    prereqs.append(or_course)
-                    #prereqs.append(or_list)
-                or_list = []
-            else:
-                prereqs = add_prereqs(and_group, prereqs)
+                or_group = Course(OR_GROUP).save()
+                or_group.add_prereqs(and_group)
+                # TODO might want to test to see if or_group.prereqs equals
+                # 0 or 1 and then delete the or_group obj if that's true
+                c.prereq.connect(or_group)
+                for p in or_group.prereq.all():
+                    if p.dept == 'CSE':
+                        cse_dept.course.connect(p)
+                    else:
+                        c.add_prereqs(and_group)
 
-        # get rid of empty lists
-        prereqs = filter(None, prereqs)
-
-        c.prereqs = prereqs
-        c.print_prereqs()
-        print
+        c.save()
         pprint(vars(c))
 
-        cse_dept.add_course(c)
+        cse_dept.course.connect(c)
+        for p in c.prereq.all():
+            if p.dept == 'CSE':
+                cse_dept.course.connect(p)
 
         #### only run 10 times
         if count > 30:
             break
-    
+
+    cse_dept.save()
     pprint(vars(cse_dept))
-    cse_dept_json = jsonpickle.encode(cse_dept, unpicklable=False)
+    
+    #cse_dept_json = jsonpickle.encode(cse_dept, unpicklable=False)
 
-    return cse_dept_json
-
-def add_prereqs(prereqs, to_list):
-    m = re.search(r"([A-Za-z]{3,4})", prereqs)
-    if m:
-        dept = m.group(1).upper()
-    else:
-        dept = 'CSE'
-    if dept != 'Not':
-        c_list = prereqs.split(',')
-        for c in c_list:
-            if c == "Gen Ed Writing Level 2":
-                to_list.append(Course(*SECOND_WRIT))
-                #to_list = add_prereq(Course(*SECOND_WRIT))
-            else:
-                m = re.search(r"(\d{4})", c)
-                if m:
-                    number = int(m.group(1))
-                    c = Course(None, number, dept)
-                    to_list.append(c)
-                    #to_list.add_prereq(c)
-
-    return to_list
-
-#def add_prereq(self, prereq):
-#    if self is None:
-#        self.prereqs = list(prereq)
-#    else:
-#        self.prereqs.append(prereq)
-
+    #return cse_dept_json
 
 if __name__=='__main__':
     f = open('data')
