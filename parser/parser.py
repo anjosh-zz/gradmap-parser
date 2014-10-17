@@ -19,10 +19,10 @@ def parse(prereq_data):
     count = 0
     for m_obj in it:
         count += 1
-        number = m_obj.group(1)
+        number = int(m_obj.group(1))
         name = m_obj.group(2)
         level = m_obj.group(3)
-        credits = m_obj.group(4)
+        credits = int(m_obj.group(4))
         dept = 'CSE'
         #if dept not in depts:
         #    depts.add(dept)
@@ -72,7 +72,7 @@ def parse(prereq_data):
 def add_prereqs(prereqs, to_list):
     m = re.search(r"([A-Za-z]{3,4})", prereqs)
     if m:
-        dept = m.group(1)
+        dept = m.group(1).upper()
     else:
         dept = 'CSE'
     if dept != 'Not':
@@ -85,7 +85,7 @@ def add_prereqs(prereqs, to_list):
                 m = re.search(r"(\d{4})", c)
                 if m:
                     number = int(m.group(1))
-                    c = course.Course(None, number, dept.upper())
+                    c = course.Course(None, number, dept)
                     to_list.append(c)
                     #to_list.add_prereq(c)
 
