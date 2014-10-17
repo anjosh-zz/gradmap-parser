@@ -1,21 +1,26 @@
 import re
 import jsonpickle
 from pprint import pprint
-import course
-import deptartment
+from course import Course
+from department import Department 
 
-# Parser for Course Bulletin page (https://web.cse.ohio-state.edu/cgi-bin/portal/report_manager/list.pl?r=12)
-# TODO might want to try parsing from CSE Semester Courses page (http://coe-portal.cse.ohio-state.edu/pdf-exports/CSE/) instead
+# Parser for Course Bulletin page:
+# https://web.cse.ohio-state.edu/cgi-bin/portal/report_manager/list.pl?r=12
+# TODO might want to try parsing from CSE Semester Courses page:
+# http://coe-portal.cse.ohio-state.edu/pdf-exports/CSE/ instead
 
 # Special Class definitions
 SECOND_WRIT = ('Gen Ed Writing Level 2', 2367, 'ENGR')
 OR_GROUP = 'Or Group'
 
+# TODO everything is backwards. make prereqs parents
+# instead of children somehow
+# TODO might want to use sets instead of lists
 def parse(prereq_data):
     #depts = {}
-    cse_dept = deptartment.Deptartment('CSE')
+    cse_dept = Department('CSE')
     it = re.finditer(r"(\d{4})\s+([\w\s,:-]+?)\s+([UG]{1,2})\s+(\d).*?" \
-                            "Prereq: (.*?)\.", prereq_data, re.MULTILINE|re.DOTALL);
+                    "Prereq: (.*?)\.", prereq_data, re.MULTILINE|re.DOTALL);
     count = 0
     for m_obj in it:
         count += 1
@@ -24,11 +29,8 @@ def parse(prereq_data):
         level = m_obj.group(3)
         credits = int(m_obj.group(4))
         dept = 'CSE'
-        #if dept not in depts:
-        #    depts.add(dept)
-        #cse_dept = dept.Dept('CSE')
 
-        c = course.Course(name, number, dept, level, credits)
+        c = Course(name, number, dept, level, credits)
         prereq_str = m_obj.group(5)
 
         added_groups = prereq_str.split('and')
@@ -42,7 +44,7 @@ def parse(prereq_data):
                 if len(or_list) == 1:
                     prereqs.append(or_list[0])
                 else:
-                    or_course = course.Course(OR_GROUP)
+                    or_course = Course(OR_GROUP)
                     or_course.prereqs = or_list
                     prereqs.append(or_course)
                     #prereqs.append(or_list)
@@ -79,13 +81,13 @@ def add_prereqs(prereqs, to_list):
         c_list = prereqs.split(',')
         for c in c_list:
             if c == "Gen Ed Writing Level 2":
-                to_list.append(course.Course(*SECOND_WRIT))
-                #to_list = add_prereq(course.Course(*SECOND_WRIT))
+                to_list.append(Course(*SECOND_WRIT))
+                #to_list = add_prereq(Course(*SECOND_WRIT))
             else:
                 m = re.search(r"(\d{4})", c)
                 if m:
                     number = int(m.group(1))
-                    c = course.Course(None, number, dept)
+                    c = Course(None, number, dept)
                     to_list.append(c)
                     #to_list.add_prereq(c)
 

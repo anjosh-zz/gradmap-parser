@@ -1,14 +1,26 @@
 import sys
+from neomodel import (StructuredNode, StringProperty, IntegerProperty,
+        RelationshipTo, RelationshipFrom)
 
-class Course:
-    def __init__(self, name = None, number = None, dept = None,
-            level = None, credits = None):
-        self.number = number
-        self.dept = dept
-        self.name = name
-        self.level = level
-        self.credits = credits
-        self.prereqs = []
+class Course(StructuredNode):
+    # TODO Might want to add more constraint properties latter
+    name = StringProperty(unique_index=True)
+    number = IntegerProperty(index=True)
+    level = StringProperty()
+    credits = IntegerProperty(index=True)
+
+    dept = RelationshipTo('Deptartment', 'IS_FROM')
+    prereq = RelationshipTo('Course', 'REQUIRES')
+
+    #def __init__(self, name = None, number = None, dept = None,
+    #        level = None, credits = None):
+    #    self.number = number
+    #    self.dept = dept
+    #    self.name = name
+    #    self.level = level
+    #    self.credits = credits
+    #    self.prereqs = []
+    #    super(Course, self).__init__(self, **args)
 
     @staticmethod
     def print_prereq(prereq):
@@ -20,13 +32,6 @@ class Course:
         for p in self.prereqs:
             if p.prereqs:
                 Course.print_prereqs(p)
-            #if type(p) is list:
-            #    sys.stdout.write('[')
-            #    sys.stdout.write(' ')
-            #    for x in p:
-            #        Course.print_prereq(x)
-            #        sys.stdout.write(' ')
-            #    sys.stdout.write(']')
             else:
                 Course.print_prereq(p)
             sys.stdout.write(' ')

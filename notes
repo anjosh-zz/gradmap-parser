@@ -19,7 +19,7 @@ Examples:
             dept: CSE
             number: 3341
             name: Principles of Programming Languages
-            credit hours: 3
+            credit: 3
 
 General:
     A Node:
