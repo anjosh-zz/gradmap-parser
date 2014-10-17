@@ -15,8 +15,6 @@ def parse(prereq_data):
     cse_dept = deptartment.Deptartment('CSE')
     it = re.finditer(r"(\d{4})\s+([\w\s,:-]+?)\s+([UG]{1,2})\s+(\d).*?" \
                             "Prereq: (.*?)\.", prereq_data, re.MULTILINE|re.DOTALL);
-    #it = re.finditer(r"(\d{4})\s+([\w\s,:-]+?)\s+(U)\s+(\d).*?" \
-    #                        "Prereq: (.*?)\.", prereq_data, re.MULTILINE|re.DOTALL);
     count = 0
     for m_obj in it:
         count += 1
@@ -67,26 +65,33 @@ def parse(prereq_data):
     return cse_dept_json
 
 def add_prereqs(prereqs, to_list):
-    m = re.search(r"(\w{3,4})", prereqs)
-    dept = m.group(1)
+    m = re.search(r"([A-Za-z]{3,4})", prereqs)
+    if m:
+        dept = m.group(1)
+    else:
+        dept = 'CSE'
     if dept != 'Not':
         c_list = prereqs.split(',')
         for c in c_list:
             if c == "Gen Ed Writing Level 2":
                 to_list.append(course.Course(*SECOND_WRIT))
+                #to_list = add_prereq(course.Course(*SECOND_WRIT))
             else:
-                # might need to look for dept only at
-                # beginning of group of prereqs 
                 m = re.search(r"(\d{4})", c)
                 if m:
                     number = int(m.group(1))
-                    if dept:
-                        c = course.Course(number, dept)
-                    else:
-                        c = course.Course(number)
+                    c = course.Course(number, dept.upper())
                     to_list.append(c)
+                    #to_list.add_prereq(c)
 
     return to_list
+
+#def add_prereq(self, prereq):
+#    if self is None:
+#        self.prereqs = list(prereq)
+#    else:
+#        self.prereqs.append(prereq)
+
 
 if __name__=='__main__':
     f = open('data')
