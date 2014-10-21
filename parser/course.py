@@ -16,7 +16,7 @@ class Course(StructuredNode):
     credits = IntegerProperty(index=True)
 
     dept = RelationshipTo('department.Department', 'IS_FROM')
-    prereq = RelationshipFrom('Course', 'PREREQ')
+    prereq = RelationshipTo('Course', 'REQUIRES')
 
     @staticmethod
     def print_prereq(prereq):
