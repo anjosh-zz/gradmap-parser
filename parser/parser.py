@@ -9,14 +9,37 @@ from course import Course
 # TODO might want to try parsing from CSE Semester Courses page:
 # http://coe-portal.cse.ohio-state.edu/pdf-exports/CSE/ instead
 
-OR_GROUP = {'name':'Or Group'}
+ABBREV_DICT = { 'Computer Science Engineering': 'CSE',
+                'Mathematics': 'MATH', }
 
-# TODO everything is backwards. make prereqs parents
-# instead of children somehow
+# data_str here is a string
+def parse_department(data_str):
+    dept_str = re.search(r"Department of (\w)", data_str)
+    dept = Department(name=ABBREV_DICT[dept_str])
+
+    it = re.finditer(r"(\d{4})\s+([\w\s,:-]+?)\s+([UG]{1,2})\s+(\d).*?" \
+                    "Prereq: (.*?)\.", prereq_data, re.MULTILINE|re.DOTALL)
+
+    count = 0
+    for m_obj in it:
+        # here we're passing a match object to parse course
+        course = parse_course(m_obj)
+        dept.course.connect(course)
+
+        count += 1
+        #### only run 10 times
+        if count > 30:
+            break
+
+
+    pprint(vars(dept))
+    return dept
+
+
 def parse(prereq_data):
     cse_dept = Department(name='CSE').save()
     it = re.finditer(r"(\d{4})\s+([\w\s,:-]+?)\s+([UG]{1,2})\s+(\d).*?" \
-                    "Prereq: (.*?)\.", prereq_data, re.MULTILINE|re.DOTALL);
+                    "Prereq: (.*?)\.", prereq_data, re.MULTILINE|re.DOTALL)
     count = 0
     for m_obj in it:
         count += 1
