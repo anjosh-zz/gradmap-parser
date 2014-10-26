@@ -4,3 +4,6 @@ Description: Formal languages and grammars; recursive descent parsing; data type
 Description: Introduction to operating system concepts: process, CPU scheduling, memory management, file system and storage, and multi-threaded programming. Prereq: 2451 or 459.21, and 2421, 360, or ECE 2560 (265). Not open to students with credit for 5431 (660).
 2451 Advanced C Programming U 2
 Description: Advanced C features for students with significant programming experience in another language. Prereq: 2221 or 222. Concur: 2231 or 321. Not open to students with credit for 2421.
+2221 Software I: Software Components U 4
+Description: Intellectual foundations of software engineering; design-by-contract principles; mathematical modeling of software functionality; component-based software from client perspective; layered data representation.
+Prereq: 1211 (203) or 1212 or 1221 (205) or 1222 (202) or 1223 (201) or 204 or EnGraph 167 or Engr 1221, or 1281.01H, or 1281.02H, or CSE Placement Level A. Concur: Math 1151 or 1161.01 or 1161.02. Not open to students with credit for 4221, 321, 502, or 5022. This course is available for EM credit.

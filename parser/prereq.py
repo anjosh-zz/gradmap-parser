@@ -1,11 +1,11 @@
 import sys
-import re
-from neomodel import (StructuredNode, StringProperty, IntegerProperty,
-        RelationshipTo, RelationshipFrom)
+
+from neomodel import (StructuredNode, StringProperty, RelationshipFrom, RelationshipTo, IntegerProperty)
+
 
 class Prereq(StructuredNode):
-    # TODO Might want to add more constraint properties latter
-    name = StringProperty()
+    name = StringProperty(index=True)
+    parent = RelationshipFrom('Course', 'REQUIRES')
 
     @staticmethod
     def print_prereq(prereq):
@@ -16,8 +16,23 @@ class Prereq(StructuredNode):
         sys.stdout.write(' ')
         for p in self.prereqs:
             if p.prereqs:
-                Course.print_prereqs(p)
+                p.print_prereqs()
             else:
-                Course.print_prereq(p)
+                p.print_prereq()
             sys.stdout.write(' ')
         sys.stdout.write(']')
+
+
+class Course(Prereq):
+    # TODO Might want to add more constraint properties later
+    number = IntegerProperty(index=True)
+    level = StringProperty()
+    credit_hours = IntegerProperty(index=True)
+
+    dept = RelationshipTo('department.Department', 'IN')
+    prereq = RelationshipTo('Prereq', 'REQUIRES')
+
+
+class OrGroup(Prereq):
+    # course = RelationshipFrom('prereq.Course', 'IN')
+    prereq = RelationshipFrom('Course', 'REQUIRES')

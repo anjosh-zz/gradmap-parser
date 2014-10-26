@@ -1,7 +1,7 @@
-from neomodel import (StructuredNode, StringProperty, IntegerProperty,
-        RelationshipTo, RelationshipFrom)
+from neomodel import (StructuredNode, StringProperty, RelationshipFrom)
+
 
 class University(StructuredNode):
-    # TODO Might want to add more constraint properties latter
+    # TODO Might want to add more constraint properties later
     name = StringProperty(unique_index=True)
-    dept = RelationshipFrom('department.Department', 'BELONGS_TO')
+    dept = RelationshipFrom('department.Department', 'IN')
