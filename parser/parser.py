@@ -118,6 +118,7 @@ def parse_course(c, m_obj):
 
             o.parent.connect(c)
             add_prereqs(o, and_group)
+            # o.refresh()
             or_prereqs = o.prereq.all()
 
             # if there is more than 1 prereq in the or group

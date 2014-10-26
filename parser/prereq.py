@@ -35,4 +35,4 @@ class Course(Prereq):
 
 class OrGroup(Prereq):
     # course = RelationshipFrom('prereq.Course', 'IN')
-    prereq = RelationshipFrom('Course', 'REQUIRES')
+    prereq = RelationshipTo('Course', 'REQUIRES')
