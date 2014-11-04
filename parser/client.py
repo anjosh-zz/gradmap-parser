@@ -1,4 +1,4 @@
-import pprint
+import json
 
 import neomodel
 
@@ -6,18 +6,25 @@ import prereq
 
 
 if __name__ == '__main__':
-    # for standalone queries
-    query = 'match (n:Course), (d:Department) where not (n)-[:REQUIRES]->(:Prereq)' \
-            'and n.level = "U" and (n)-[:IN]->(d) return n, d'
-    params = None
-    results, meta = neomodel.db.cypher_query(query, params)
-    starting_courses = [prereq.Course.inflate(row[0]) for row in results]
-    pprint.pprint(starting_courses)
+    starting_dept = 'CSE'
 
-    print(starting_courses[0].name)
-    print(starting_courses[0].__dict__)
-    print(starting_courses[0].prereq.all())
-    print(starting_courses[0].dept.all())
-    # pprint.pprint(jsonpickle.encode(starting_courses[0]))
-    # for s in starting_courses:
-    # print(jsonpickle.encode(s, unpicklable=False))
+    query = 'match (n:Course),  (d:Department) where not (n)-[:REQUIRES]->(:Prereq) and ' \
+            'n.level = "U" and d.name = "{0}" and (n)-[:IN]->(d) return n'.format(starting_dept)
+    results, meta = neomodel.db.cypher_query(query)
+    starting_courses = [prereq.Course.inflate(row[0]) for row in results]
+
+    f = open('../graph/static/output.json', 'w')
+
+    starting_json = {"name": "CSE", "credit_hours": 10}
+    children_arr = []
+    for c in starting_courses:
+        grand_children = c.parent.all()
+        grand_children += c.orgroup.all()
+        grand_children_arr = []
+        for g in grand_children:
+            grand_children_arr.append(g.to_dict())
+        c_dict = c.to_dict()
+        c_dict['children'] = grand_children_arr
+        children_arr.append(c_dict)
+    starting_json['children'] = children_arr
+    f.write(json.dumps(starting_json, indent=4))

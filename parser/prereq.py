@@ -5,7 +5,6 @@ from neomodel import (StructuredNode, StringProperty, RelationshipFrom, Relation
 
 class Prereq(StructuredNode):
     name = StringProperty(index=True)
-    parent = RelationshipFrom('Course', 'REQUIRES')
 
     @staticmethod
     def print_prereq(prereq):
@@ -31,8 +30,29 @@ class Course(Prereq):
 
     dept = RelationshipTo('department.Department', 'IN')
     prereq = RelationshipTo('Prereq', 'REQUIRES')
+    parent = RelationshipFrom('Course', 'REQUIRES')
+    orgroup = RelationshipFrom('OrGroup', 'REQUIRES')
+
+    def to_dict(self):
+        d = dict.copy(self.__dict__)
+        d.pop('dept')
+        d.pop('prereq')
+        d.pop('parent')
+        d.pop('orgroup')
+        return d
 
 
 class OrGroup(Prereq):
-    # course = RelationshipFrom('prereq.Course', 'IN')
+    course = RelationshipFrom('Course', 'REQUIRES')
     prereq = RelationshipTo('Course', 'REQUIRES')
+
+    def to_dict(self):
+        d = dict.copy(self.__dict__)
+        d.pop('course')
+        d.pop('prereq')
+        children = self.course.all()
+        c_array = []
+        for c in children:
+            c_array.append(c.to_dict())
+        d['children'] = c_array
+        return d
