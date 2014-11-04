@@ -1,0 +1,211 @@
+{
+    "name": "CSE",
+    "credit_hours": 10,
+    "children": [
+        {
+            "_id": 1333,
+            "level": "U",
+            "name": "Introduction to Computing Technology",
+            "number": 1110,
+            "children": [],
+            "credit_hours": 2
+        },
+        {
+            "_id": 1334,
+            "level": "U",
+            "name": "Introduction to Computer-Assisted Problem Solving",
+            "number": 1111,
+            "children": [],
+            "credit_hours": 3
+        },
+        {
+            "_id": 1335,
+            "level": "U",
+            "name": "Introduction to Computer-Assisted Problem Solving for Construction Systems Management",
+            "number": 1112,
+            "children": [],
+            "credit_hours": 3
+        },
+        {
+            "_id": 1340,
+            "level": "U",
+            "name": "Computational Thinking in Context: Images, Animation, and Games",
+            "number": 1211,
+            "children": [
+                {
+                    "_id": 1460,
+                    "name": "Or Group",
+                    "children": [
+                        {
+                            "_id": 1459,
+                            "level": "UG",
+                            "name": "Survey of Artificial Intelligence for Non-Majors",
+                            "number": 5052,
+                            "credit_hours": 3
+                        }
+                    ]
+                },
+                {
+                    "_id": 1362,
+                    "name": "Or Group",
+                    "children": [
+                        {
+                            "_id": 1361,
+                            "level": "U",
+                            "name": "Software I: Software Components",
+                            "number": 2221,
+                            "credit_hours": 4
+                        }
+                    ]
+                }
+            ],
+            "credit_hours": 3
+        },
+        {
+            "_id": 1341,
+            "level": "U",
+            "name": "Computational Thinking in Context: Mobile Applications",
+            "number": 1212,
+            "children": [
+                {
+                    "_id": 1362,
+                    "name": "Or Group",
+                    "children": [
+                        {
+                            "_id": 1361,
+                            "level": "U",
+                            "name": "Software I: Software Components",
+                            "number": 2221,
+                            "credit_hours": 4
+                        }
+                    ]
+                }
+            ],
+            "credit_hours": 3
+        },
+        {
+            "_id": 1347,
+            "level": "U",
+            "name": "Introduction to Computer Programming in Java",
+            "number": 1223,
+            "children": [
+                {
+                    "_id": 1355,
+                    "level": "U",
+                    "name": "Data Structures Using Java",
+                    "number": 2123,
+                    "credit_hours": 3
+                },
+                {
+                    "_id": 1546,
+                    "name": "Or Group",
+                    "children": [
+                        {
+                            "_id": 1545,
+                            "level": "UG",
+                            "name": "Social, Ethical, and Professional Issues in Computing",
+                            "number": 5501,
+                            "credit_hours": 1
+                        }
+                    ]
+                },
+                {
+                    "_id": 1460,
+                    "name": "Or Group",
+                    "children": [
+                        {
+                            "_id": 1459,
+                            "level": "UG",
+                            "name": "Survey of Artificial Intelligence for Non-Majors",
+                            "number": 5052,
+                            "credit_hours": 3
+                        }
+                    ]
+                },
+                {
+                    "_id": 1388,
+                    "name": "Or Group",
+                    "children": [
+                        {
+                            "_id": 1387,
+                            "level": "U",
+                            "name": "Social, Ethical, and Professional Issues in Computing",
+                            "number": 2501,
+                            "credit_hours": 1
+                        }
+                    ]
+                },
+                {
+                    "_id": 1362,
+                    "name": "Or Group",
+                    "children": [
+                        {
+                            "_id": 1361,
+                            "level": "U",
+                            "name": "Software I: Software Components",
+                            "number": 2221,
+                            "credit_hours": 4
+                        }
+                    ]
+                }
+            ],
+            "credit_hours": 3
+        },
+        {
+            "_id": 1357,
+            "level": "U",
+            "name": "Individual Studies in Computer Science and Engineering",
+            "number": 2193,
+            "children": [],
+            "credit_hours": 1
+        },
+        {
+            "_id": 1359,
+            "level": "U",
+            "name": "Group Studies in Computer Science and Engineering",
+            "number": 2194,
+            "children": [],
+            "credit_hours": 1
+        },
+        {
+            "_id": 1437,
+            "level": "U",
+            "name": "Professional Practice in Industry",
+            "number": 4191,
+            "children": [],
+            "credit_hours": 0
+        },
+        {
+            "_id": 1438,
+            "level": "U",
+            "name": "Individual Studies in Computer Science and Engineering",
+            "number": 4193,
+            "children": [],
+            "credit_hours": 1
+        },
+        {
+            "_id": 1440,
+            "level": "U",
+            "name": "Group Studies in Computer Science and Engineering",
+            "number": 4194,
+            "children": [],
+            "credit_hours": 1
+        },
+        {
+            "_id": 1448,
+            "level": "U",
+            "name": "Undergraduate Research in Computer Science and Engineering",
+            "number": 4998,
+            "children": [],
+            "credit_hours": 1
+        },
+        {
+            "_id": 1450,
+            "level": "U",
+            "name": "Computer Science and Engineering Research for Thesis",
+            "number": 4999,
+            "children": [],
+            "credit_hours": 1
+        }
+    ]
+}

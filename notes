@@ -1,0 +1,42 @@
+Neo4j Organization:
+
+Specific:
+    Course:
+        Relationships:
+            blocked by (Not open to students with credit for)
+            requires (Prereq)
+            can be taken concurrently with (Concur)
+            
+        Properties:
+            This course is available for EM credit
+            Cross-listed in Engr
+            This course is graded S/U
+            Repeatable to a maximum of X cr hrs or X completions.
+
+Examples:
+    Node:
+        Properties:
+            dept: CSE
+            number: 3341
+            name: Principles of Programming Languages
+            credit: 3
+
+General:
+    A Node:
+        can have: Relationships can have: Properties
+        can have: Properties
+        can have: Labels
+
+    A Relationship:
+        has a: Start node
+        has a: End node
+        has a: Relationship Type: uniquely identified by: Name
+        can have: Properties
+
+    A Property:
+        has a: Value
+        has a: Key
+
+    A Label:
+        has a: Name
+        groups: Node
