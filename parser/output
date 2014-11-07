@@ -1,0 +1,375 @@
+<callable-iterator object at 0x7ff47bb70dd0>
+Not open to students with credit for 1111 (101), 1113, or 100
+Not open to students with credit for 1112 (105), 1113 (101), or 200
+Not open to students with credit for 1111 (101), 1113, 105, or 200
+Math 1130 (130) or above
+Math 1130 (130) or above
+parent: Or Group
+dept: MATH number: 1130
+department doens't exist
+parent: Spreadsheet Programming for Business
+dept: MATH number: 1130
+department already exists
+class already exists
+Not open to students with credit for 203 or 204
+None
+Engr 1181, 1281, Math 151, or Physics 131
+Engr 1181, 1281, Math 151, or Physics 131
+parent: Or Group
+dept: ENGR number: 1181
+department doens't exist
+dept: ENGR number: 1281
+department already exists
+class doens't exist
+Not open to students with credit for 201
+Math 1151 (152) or equivalent, and Physics 1250 (131)
+Math 1151 (152) or equivalent,
+parent: Or Group
+dept: MATH number: 1151
+department already exists
+class doens't exist
+parent: Introduction to Modeling and Simulation
+dept: MATH number: 1151
+department already exists
+class already exists
+Physics 1250 (131)
+parent: Introduction to Modeling and Simulation
+dept: PHYSICS number: 1250
+department doens't exist
+Math 1130 (130) or above
+Math 1130 (130) or above
+parent: Or Group
+dept: MATH number: 1130
+department already exists
+class already exists
+parent: Modeling and Problem Solving with Spreadsheets and Databases
+dept: MATH number: 1130
+department already exists
+class already exists
+1223 (201)
+1223 (201)
+parent: Data Structures Using Java
+dept: CSE number: 1223
+department already exists
+class already exists
+2123 (214)
+2123 (214)
+parent: Business Programming with File Processing
+dept: CSE number: 2123
+department already exists
+class already exists
+Permission of instructor
+Permission of instructor
+parent: Or Group
+Permission of instructor
+Permission of instructor
+parent: Or Group
+1211 (203) or 1212 or 1221 (205) or 1222 (202) or 1223 (201) or 204 or EnGraph 167 or Engr 1221, or 1281
+1211 (203) or 1212 or 1221 (205) or 1222 (202) or 1223 (201) or 204 or EnGraph 167 or Engr 1221, or 1281
+parent: Or Group
+dept: CSE number: 1211
+department already exists
+class already exists
+dept: CSE number: 1212
+department already exists
+class already exists
+dept: CSE number: 1221
+department already exists
+class already exists
+dept: CSE number: 1222
+department already exists
+class doens't exist
+dept: CSE number: 1223
+department already exists
+class already exists
+dept: ENGR number: 1221
+department already exists
+class doens't exist
+dept: ENGR number: 1281
+department already exists
+class already exists
+2221
+2221
+parent: Software II: Software Development and Design
+dept: CSE number: 2221
+department already exists
+class already exists
+1232, 1233, 2221, 214, 222, or 230, and Math 1151 or 152
+1232, 1233, 2221, 214, 222, or 230,
+parent: Or Group
+dept: CSE number: 1232
+department already exists
+class doens't exist
+dept: CSE number: 1233
+department already exists
+class doens't exist
+dept: CSE number: 2221
+department already exists
+class already exists
+Math 1151 or 152
+parent: Or Group
+dept: MATH number: 1151
+department already exists
+class already exists
+parent: Foundations I: Discrete Structures
+dept: MATH number: 1151
+department already exists
+class already exists
+2231 or 321, and 2321 or Math 566, and Stat 3460, 3470, or 427
+2231 or 321,
+parent: Or Group
+dept: CSE number: 2231
+department already exists
+class already exists
+parent: Foundations II: Data Structures and Algorithms
+dept: CSE number: 2231
+department already exists
+class already exists
+2321 or Math 566,
+parent: Or Group
+dept: CSE number: 2321
+department already exists
+class already exists
+parent: Foundations II: Data Structures and Algorithms
+dept: CSE number: 2321
+department already exists
+class already exists
+Stat 3460, 3470, or 427
+parent: Or Group
+dept: STAT number: 3460
+department doens't exist
+dept: STAT number: 3470
+department already exists
+class doens't exist
+1232, 1233, 2231, or 321, and 2321, Math 2566, or 366
+1232, 1233, 2231, or 321,
+parent: Or Group
+dept: CSE number: 1232
+department already exists
+class already exists
+dept: CSE number: 1233
+department already exists
+class already exists
+dept: CSE number: 2231
+department already exists
+class already exists
+2321, Math 2566, or 366
+parent: Or Group
+dept: CSE number: 2321
+department already exists
+class already exists
+dept: MATH number: 2566
+department already exists
+class doens't exist
+2451 or 459
+2451 or 459
+parent: Or Group
+dept: CSE number: 2451
+department already exists
+class doens't exist
+parent: Systems II: Introduction to Operating Systems
+dept: CSE number: 2451
+department already exists
+class already exists
+2221 or 222
+2221 or 222
+parent: Or Group
+dept: CSE number: 2221
+department already exists
+class already exists
+parent: Advanced C Programming
+dept: CSE number: 2221
+department already exists
+class already exists
+1222, 1223, 2231, 214, 222, or 230, and 2321 or Math 366, and Gen Ed Writing Level 2
+1222, 1223, 2231, 214, 222, or 230,
+parent: Or Group
+dept: CSE number: 1222
+department already exists
+class already exists
+dept: CSE number: 1223
+department already exists
+class already exists
+dept: CSE number: 2231
+department already exists
+class already exists
+2321 or Math 366,
+parent: Or Group
+dept: CSE number: 2321
+department already exists
+class already exists
+parent: Social, Ethical, and Professional Issues in Computing
+dept: CSE number: 2321
+department already exists
+class already exists
+Gen Ed Writing Level 2
+parent: Social, Ethical, and Professional Issues in Computing
+3901 or 3902 or 3903
+3901 or 3902 or 3903
+parent: Or Group
+dept: CSE number: 3901
+department already exists
+class doens't exist
+dept: CSE number: 3902
+department already exists
+class doens't exist
+dept: CSE number: 3903
+department already exists
+class doens't exist
+3241 or 3901 or 3902 or 3903 (560) or 5241 (670)
+3241 or 3901 or 3902 or 3903 (560) or 5241 (670)
+parent: Or Group
+dept: CSE number: 3241
+department already exists
+class doens't exist
+dept: CSE number: 3901
+department already exists
+class already exists
+dept: CSE number: 3902
+department already exists
+class already exists
+dept: CSE number: 3903
+department already exists
+class already exists
+dept: CSE number: 5241
+department already exists
+class doens't exist
+2133 or 2231 or 2233 (314) or 321, and 2321 or Math 2366 (366)
+2133 or 2231 or 2233 (314) or 321,
+parent: Or Group
+dept: CSE number: 2133
+department already exists
+class already exists
+dept: CSE number: 2231
+department already exists
+class already exists
+dept: CSE number: 2233
+department already exists
+class doens't exist
+2321 or Math 2366 (366)
+parent: Or Group
+dept: CSE number: 2321
+department already exists
+class already exists
+dept: MATH number: 2366
+department already exists
+class doens't exist
+2231 or 321, and 2421 or 360, and 2331 or Math 566
+2231 or 321,
+parent: Or Group
+dept: CSE number: 2231
+department already exists
+class already exists
+parent: Automata and Formal Languages
+dept: CSE number: 2231
+department already exists
+class already exists
+2421 or 360,
+parent: Or Group
+dept: CSE number: 2421
+department already exists
+class already exists
+parent: Automata and Formal Languages
+dept: CSE number: 2421
+department already exists
+class already exists
+2331 or Math 566
+parent: Or Group
+dept: CSE number: 2331
+department already exists
+class already exists
+parent: Automata and Formal Languages
+dept: CSE number: 2331
+department already exists
+class already exists
+2231, 2331 (680), and 2421, and 3901 (560), 3902, or 3903
+2231, 2331 (680),
+parent: Principles of Programming Languages
+dept: CSE number: 2231
+department already exists
+class already exists
+dept: CSE number: 2331
+department already exists
+class already exists
+2421,
+parent: Principles of Programming Languages
+dept: CSE number: 2421
+department already exists
+class already exists
+3901 (560), 3902, or 3903
+parent: Or Group
+dept: CSE number: 3901
+department already exists
+class already exists
+dept: CSE number: 3902
+department already exists
+class already exists
+dept: CSE number: 3903
+department already exists
+class already exists
+2231 or 321, and 2421, 2560, 265, or 360, and 2000 or 261
+2231 or 321,
+parent: Or Group
+dept: CSE number: 2231
+department already exists
+class already exists
+parent: Introduction to Computer Architecture
+dept: CSE number: 2231
+department already exists
+class already exists
+2421, 2560, 265, or 360,
+parent: Or Group
+dept: CSE number: 2421
+department already exists
+class already exists
+dept: CSE number: 2560
+department already exists
+class doens't exist
+2000 or 261
+parent: Or Group
+dept: CSE number: 2000
+department already exists
+class doens't exist
+parent: Introduction to Computer Architecture
+dept: CSE number: 2000
+department already exists
+class already exists
+2451, and 2421 or ECE 2560 (265)
+2451,
+parent: Computer Networking and Internet Technologies
+dept: CSE number: 2451
+department already exists
+class already exists
+2421 or ECE 2560 (265)
+parent: Or Group
+dept: CSE number: 2421
+department already exists
+class already exists
+dept: ECE number: 2560
+department doens't exist
+2331, or 222 and Math 366, or Sr standing
+2331, or 222
+parent: Or Group
+dept: CSE number: 2331
+department already exists
+class already exists
+parent: Survey of Artificial Intelligence I: Basic Techniques
+dept: CSE number: 2331
+department already exists
+class already exists
+Math 366, or Sr st
+parent: Or Group
+ing
+parent: Survey of Artificial Intelligence I: Basic Techniques
+3901 or 3902 or 3903 (560)
+3901 or 3902 or 3903 (560)
+parent: Or Group
+dept: CSE number: 3901
+department already exists
+class already exists
+dept: CSE number: 3902
+department already exists
+class already exists
+dept: CSE number: 3903
+department already exists
+class already exists
