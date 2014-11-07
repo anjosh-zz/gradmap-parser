@@ -19,13 +19,19 @@ SECOND_WRIT_STRS = ['Gen Ed Writing Level 2',
                     'Second writing course']
 SECOND_WRIT = {'name': 'Gen Ed Writing Level 2', 'number': 2367}
 
-NUMBER = "(\d{4}(?:\.\d{2})?)"
-# NUMBER = "(\d{4})"
-COURSE = r"(?:(?:{0} )?{1})|{2}|{3}|{4}".format(DEPARTMENT, NUMBER, *SECOND_WRIT_STRS)
+#NUMBER = "(\d{4}(?:\.\d{2})?)"
+NUMBER = "(\d{4})"
+NAME = "([\w\s,:+-]+?)"
+LEVEL = "([UG]{1,2})"
+CREDIT_HOURS = "(\d)"
+
+PREREQ = r"(?:(?:{0} )?{1})|{2}|{3}|{4}".format(DEPARTMENT, NUMBER, *SECOND_WRIT_STRS)
 
 OR_GROUP = 'Or Group'
 
 
+# see if course already exists in department and
+# return the course in the department if it does
 def search_dept(c):
     dept = c.dept.all()[0]
     c_list = dept.course.search(number=c.number)
@@ -53,7 +59,7 @@ def add_prereqs(parent, prereqs):
     # the department starts off as the parent's department
     dept_str = parent_dept.name
 
-    it = re.finditer(COURSE, prereqs)
+    it = re.finditer(PREREQ, prereqs)
 
     for m_obj in it:
         # if there is a match for department then update
@@ -97,11 +103,14 @@ def add_prereqs(parent, prereqs):
             parent.prereq.connect(c)
 
 
+def get_new_course_number(number):
+    DICT = {}
+    return number
+
 # using a string here unlike parse_department
 def parse_course(c, m_obj):
-    c.number = int(m_obj.group(1))
+    c.number = get_new_course_number(int(m_obj.group(1)))
 
-    # see if course already exists and return if it does
     c = search_dept(c)
 
     c.name = m_obj.group(2)
@@ -128,7 +137,7 @@ def parse_course(c, m_obj):
                 # if there is more than 1 prereq in the or group
                 # keep the group
                 if len(or_prereqs) > 1:
-                    c.prereq.connect(o)
+                    c.orgroup_prereq.connect(o)
 
                 # if there is only one prereq in the group directly
                 # set that prereq as a prereq to the parent course
@@ -154,8 +163,10 @@ def parse_course_bulletin(data_str, dept):
     dept.name = ABBREV_DICT[dept_str]
     dept.save()
 
-    it = re.finditer(r"(\d{4})\s+([\w\s,:-]+?)\s+([UG]{1,2})\s+(\d).*?</div>.*?</span>"
-                     r"(?:[^<]*?(?:Prereq: (.*?)\.)|[^<]*?)", data_str, re.MULTILINE | re.DOTALL)
+    course_regex = r"{0}\s+{1}\s+{2}\s+{3}.*?</div>.*?</span>(?:[^<]*?(?:Prereq: (.*?)\.)|[^<]*?)".format(NUMBER, NAME, LEVEL, CREDIT_HOURS)
+    print(course_regex)
+    
+    it = re.finditer(course_regex, data_str, re.MULTILINE | re.DOTALL)
 
     pprint.pprint(it)
     count = 0
@@ -167,9 +178,9 @@ def parse_course_bulletin(data_str, dept):
         c.save()
 
         count += 1
-        # only run 10 times
-        # if count > 30:
-        # break
+        # only run 30 times
+        #if count > 30:
+        #    break
 
     return dept
 
@@ -192,9 +203,9 @@ def get_course_bulletin():
 
 
 if __name__ == '__main__':
-    course_bulletin = get_course_bulletin()
-    # f = open('data')
-    # course_bulletin = f.read()
+    #course_bulletin = get_course_bulletin()
+    f = open('course_bulletin.htm')
+    course_bulletin = f.read()
     parse(course_bulletin)
 
     # f = open('course_bulletin.json', 'w')

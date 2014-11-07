@@ -15,6 +15,10 @@ def cost(course):
                     result += cost(p)
                 for o in course.orgroup_prereq.all():
                     result += cost(o)
+            # TODO: need to add special logic for OrGroups because we can't
+            # just say the courses in an OrGroup or their children have been
+            # visited because we might not choose that OrGroup course as the
+            # one we want
             else:
                 cost_list = []
                 for p in course.prereq.all():

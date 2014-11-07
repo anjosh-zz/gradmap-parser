@@ -1,10 +1,14 @@
 import sys
 
-from neomodel import (StructuredNode, StringProperty, RelationshipFrom, RelationshipTo, IntegerProperty)
+from neomodel import (StructuredNode, StringProperty, RelationshipFrom, RelationshipTo, IntegerProperty, BooleanProperty)
 
 
 class Prereq(StructuredNode):
     name = StringProperty(index=True)
+    prereq = RelationshipTo('Course', 'REQUIRES')
+    parent = RelationshipFrom('Course', 'REQUIRES')
+    cost = IntegerProperty(index=True)
+    visited = BooleanProperty(default=False)
 
     @staticmethod
     def print_prereq(prereq):
@@ -29,7 +33,7 @@ class Course(Prereq):
     credit_hours = IntegerProperty(index=True)
 
     dept = RelationshipTo('department.Department', 'IN')
-    prereq = RelationshipTo('Prereq', 'REQUIRES')
+    orgroup_prereq = RelationshipTo('OrGroup', 'REQUIRES')
     parent = RelationshipFrom('Course', 'REQUIRES')
     orgroup = RelationshipFrom('OrGroup', 'REQUIRES')
 
@@ -43,9 +47,6 @@ class Course(Prereq):
 
 
 class OrGroup(Prereq):
-    course = RelationshipFrom('Course', 'REQUIRES')
-    prereq = RelationshipTo('Course', 'REQUIRES')
-
     def to_dict(self):
         d = dict.copy(self.__dict__)
         d.pop('course')
