@@ -1,4 +1,1 @@
-visualiz
-========
-
-Visually see your college classes using a intuitive graph UI.
+Parses and populates a neo4j database with The Ohio State University's CSE course information.
